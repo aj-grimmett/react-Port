@@ -1,35 +1,45 @@
-import React from "react";
-// import emailjs from "emailjs.com";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
-  const [formStatus, setFormStatus] = React.useState("Send");
-  const onSubmit = (e) => {
-    e.preventDefault();
-    setFormStatus("Sending...");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [tel, setTel] = useState("");
+  const [company, setCompany] = useState("");
+  const [emailSent, setEmailSent] = useState(false);
 
-    const { name, tel, email, company, message } = e.target.elements;
-    let conFom = {
-      name: name.value,
-      tel: tel.value,
-      email: email.value,
-      company: company.value,
-      message: message.value,
-    };
-    // const serviceId = "service_igxnw7p";
-    // const templateId = "template_rjdi9i7";
-    // const userId = "AOZCBh8cfjMr0uP22";
-    // const templateParams = {
-    //   name,
-    //   tel,
-    //   email,
-    //   company,
-    //   message,
-    // };
+  const submit = () => {
+    if (
+      (name && tel && email && message) ||
+      (name && email && tel && company && message)
+    ) {
+      const templateParams = {
+        name,
+        tel,
+        email,
+        company,
+        message,
+      };
+      emailjs
+        .send(
+          "service_igxnw7p",
+          "template_a7to41u",
+          templateParams,
+          "XTadRl2FtdGez3O8I"
+        )
+        .then((response) => console.log(response))
+        .then((error) => console.log(error));
 
-    // emailjs
-    //   .send(serviceId, templateId, templateParams, userId)
-    //   .then((response) => console.log(response))
-    //   .then((error) => console.log(error));
-    console.log(conFom);
+      setName("");
+      setTel("");
+      setEmail("");
+      setCompany("");
+      setMessage("");
+      setEmailSent(true);
+    } else {
+      alert("Please fill in all fields.");
+    }
   };
 
   return (
@@ -37,40 +47,81 @@ const Contact = () => {
       <div className="container mt-5">
         <h2 className="mt-5">Contact Form </h2>
         <p style={{ fontSize: "1rem" }}>* means required to fill </p>
-        <form onSubmit={onSubmit}>
+        <form>
           <div className="mb-5">
             <label className="form-label" htmlFor="name">
               Name*
             </label>
-            <input className="form-control" type="text" id="name" required />
+            <input
+              className="form-control"
+              type="text"
+              value={name}
+              name="name"
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
           </div>
           <div className="mb-5">
             <label className="form-label" htmlFor="tel">
               Phone Number
             </label>
-            <input className="form-control" type="text" id="tel" />
+            <input
+              className="form-control"
+              value={tel}
+              type="text"
+              name="tel"
+              onChange={(e) => setTel(e.target.value)}
+            />
           </div>
           <div className="mb-5">
             <label className="form-label" htmlFor="email">
               Email*
             </label>
-            <input className="form-control" type="email" id="email" required />
+            <input
+              className="form-control"
+              type="email"
+              value={email}
+              name="email"
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
           <div className="mb-5">
             <label className="form-label" htmlFor="Company">
               Company
             </label>
-            <input className="form-control" type="text" id="company" />
+            <input
+              className="form-control"
+              value={company}
+              type="text"
+              name="company"
+              onChange={(e) => setCompany(e.target.value)}
+            />
           </div>
           <div className="mb-5">
             <label className="form-label" htmlFor="message">
               Message*
             </label>
-            <textarea className="form-control" id="message" required />
+            <textarea
+              placeholder="Your message"
+              value={message}
+              className="form-control"
+              name="message"
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
           </div>
-          <button className="btn btn-md btn-danger mb-5" type="submit">
-            {formStatus}
+          <button
+            onClick={submit}
+            style={{ textAlign: "center" }}
+            className="btn btn-md btn-danger mb-5"
+            type="submit"
+          >
+            Submit
           </button>
+          <span className={emailSent ? "visible" : null}>
+            Thank you for conntacing me. Will be in touch as soon as I can
+          </span>
         </form>
       </div>
     </div>
