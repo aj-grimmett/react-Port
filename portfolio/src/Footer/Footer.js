@@ -6,7 +6,7 @@ const linked = <FontAwesomeIcon icon={faLinkedin} />;
 const git = <FontAwesomeIcon icon={faSquareGithub} />;
 const footer = () => {
   return (
-    <div className="wrapper">
+    <div className="footer">
       <div className="information  d-flex-lg-row justify-content-between">
         <ul style={{ listStyleType: "none" }}>
           <li className="btn btn-danger btn-sm ">
@@ -18,7 +18,7 @@ const footer = () => {
           <li>
             <a
               id="icon"
-              href="https://www.linkedin.com/in/albert-grimmett-jr-57569b165"
+              href="https://www.linkedin.com/in/albert-grimmett-jr-572343654464q313"
             >
               {linked}
             </a>

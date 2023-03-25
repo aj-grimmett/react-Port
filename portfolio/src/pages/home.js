@@ -16,10 +16,11 @@ const Home = () => {
           </div>
           <div className="info">
             <p>
-              I am a web developer from Gilbert, West Virginia. I enjoy building
-              everything from small business sites to interactive apps. If you
-              are a business or an individual seeking a website or an employer
-              looking to hire, you can get in touch <u>here</u>.
+              I am a freelance web developer from Gilbert, West Virginia. I
+              enjoy building everything from small business websites to
+              interactive apps. If you are a business or an individual seeking a
+              website or an employer looking to hire, you can get in touch{" "}
+              <u>here</u>.
             </p>
           </div>
           <div
@@ -47,6 +48,12 @@ const Home = () => {
       <div className="home-con">
         <div className="details">
           <p>
+            I am mainly self-taught by doing courses on Udemy and been studying
+            since 2019. Then in the summer of 2020 I enrolled into an online
+            coding bootcamp at Lambda School which is now known as Bloom
+            Insitute of Technology.
+          </p>
+          <p>
             As of now I have done two websites, One for Susan Perry who ran for
             WV State House of Representative in 2020 and the other for a small
             family owed lodge.<br></br>
@@ -59,9 +66,9 @@ const Home = () => {
                 Hawks Riverside Lodge
               </button>
             </a>
-            <p id="link">link for the family owned lodge </p>
-            <br></br>I am currlently talking to owners of another lodge about
-            doing a new website for them that includes online booking.
+            <p id="link">link for the family owned lodge </p>I am currlently
+            talking to owners of another lodge about doing a new website for
+            them that includes online booking.
           </p>
         </div>
       </div>
