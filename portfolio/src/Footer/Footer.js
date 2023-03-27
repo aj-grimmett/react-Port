@@ -19,19 +19,12 @@ const footer = () => {
             <a
               id="icon"
               href="https://www.linkedin.com/in/albert-grimmett-jr-572343654464q313"
-              rel="noreferrer"
-              target="_blank"
             >
               {linked}
             </a>
           </li>
           <li>
-            <a
-              id="icon-2"
-              href="https://github.com/aj-grimmett"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a id="icon-2" href="https://github.com/aj-grimmett">
               {git}
             </a>
           </li>

@@ -48,10 +48,8 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container mt-5">
-        <h1 className="mt-5">Contact Form </h1>
-        <p style={{ fontSize: "1.25rem", fontWeight: "400" }}>
-          * means required to fill{" "}
-        </p>
+        <h2 className="mt-5">Contact Form </h2>
+        <p style={{ fontSize: "1rem" }}>* means required to fill </p>
         <form>
           <div className="mb-5">
             <label className="form-label" htmlFor="name">
