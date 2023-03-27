@@ -43,10 +43,10 @@ const About = () => {
       <div className="ab-container">
         <div className="pro">
           <p>
-            I learned most of my skills since Lambda doing classes mainly on
+            I leanered most of my skills since Lambda doing classes mainly on
             Udemy but also other online platforms including Youtube,
             Freecodecamp.com and Odinproject.com. I focused on certain coding
-            languages to make me as well balanced of a developer as I can be.
+            langues to make me as well balanced of a developer as I can be.
           </p>
 
           <p>
