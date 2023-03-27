@@ -6,11 +6,16 @@ html {
   font-size: 62.5%;
   font: inherit;
 }
+html,
 body {
   width: 100%;
   height: 100%;
   overflow: auto;
   overflow-x: hidden;
+}
+#root {
+  width: 100%;
+  height: 100%;
 }
 .App {
   text-align: center;
@@ -24,11 +29,20 @@ body {
   padding-right: 1%;
   margin-right: -18%;
   margin-left: 4%;
+  padding-bottom: 1%;
 }
 @media ( max-width: 600px)  {
   .navbar #logo {
     width: 12%;
     height: 12%;
+    padding: 2% 2% 4% 0;
+  }
+}
+@media ( max-width: 780px) {
+  .navbar #logo {
+    width: 12%;
+    height: 12%;
+    padding: 2% 0 4% 0;
   }
 }
 .navbar .heading {
@@ -47,13 +61,13 @@ body {
 @media ( max-width: 600px)  {
   .navbar .heading ul {
     font-size: 0.6rem;
-    margin-left: 5%;
+    margin-left: 7%;
   }
 }
 @media (max-width: 403px) {
   .navbar .heading ul {
     font-size: 0.5rem;
-    margin-left: 7%;
+    margin-left: 9%;
   }
 }
 .navbar .heading ul #top {
@@ -93,10 +107,12 @@ body {
   background-position: center;
   width: 100%;
   height: 100%;
+  padding-bottom: 4%;
 }
 .home .background .every {
   display: block;
   width: 99%;
+  height: 100%;
   align-items: center;
   justify-content: space-around;
   padding: 3%;
@@ -132,8 +148,27 @@ body {
   font-style: oblique;
   font-weight: 300;
 }
+.home .background .every .btn-group-lg > .btn,
+.home .background .every .btn-lg {
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-font-size: 1.25rem;
+  --bs-btn-border-radius: 0.5rem;
+}
+@media ( max-width: 600px)  {
+  .home .background .every .btn-group-lg > .btn,
+  .home .background .every .btn-lg {
+    --bs-btn-font-size: 1rem;
+  }
+}
+@media (max-width: 403px) {
+  .home .background .every .btn-group-lg > .btn,
+  .home .background .every .btn-lg {
+    --bs-btn-font-size: 1rem;
+  }
+}
 .home .background .every .buttons {
-  width: 80%;
+  width: 100%;
 }
 .home .home-con {
   width: 100%;
@@ -141,11 +176,19 @@ body {
   background: blanchedalmond;
 }
 .home .home-con .details {
-  width: 100%;
+  width: 70%;
   height: 100%;
+  align-items: right;
   text-align: center;
-  padding: 2% 2%;
+  padding: 2% 1% 2% 7%;
+  margin-left: 11%;
+  line-height: 1.7;
   font-size: 1.4rem;
+}
+@media ( max-width: 600px)  {
+  .home .home-con .details {
+    padding: 2% 0;
+  }
 }
 .home .home-con .details button {
   font-size: 0.7rem;
@@ -153,9 +196,14 @@ body {
 .home .home-con #link {
   font-size: 0.6rem;
 }
+.about {
+  width: 100%;
+  height: 100%;
+}
 .header {
   width: 100%;
-  height: 70%;
+  height: 100%;
+  padding-bottom: 3%;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -188,7 +236,9 @@ body {
 .header .ab-info {
   color: slategrey;
   text-align: left;
+  font-weight: 500;
   width: 50%;
+  height: 100%;
   margin-left: -5%;
   padding: 3% 2% 0 0;
   font-style: oblique;
@@ -223,7 +273,7 @@ body {
   font-weight: 400;
 }
 .ab-container {
-  line-height: 1.5;
+  line-height: 1.7;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 200;
@@ -232,9 +282,12 @@ body {
   text-align: center;
   justify-content: right;
   margin: 2%;
-  padding-left: 3%;
+  padding: 0 5% 0 7%;
   width: 90%;
   height: 100%;
+}
+.ab-container p {
+  padding: 2% 0;
 }
 #icon1 {
   color: black;
@@ -243,93 +296,97 @@ body {
 .contact {
   width: 100%;
   height: 100%;
-  padding-bottom: 1%;
 }
 .container {
   width: 100%;
   text-align: center;
+  padding-bottom: 4%;
 }
-.wrapper {
+.container input {
+  text-align: center;
+}
+.footer {
   width: 100%;
   height: 100%;
   margin-bottom: 0;
   background-size: cover;
   background: linear-gradient(180.2deg, #1e2130 6.8%, #4a626e 131%);
 }
-.wrapper .information {
+.footer .information {
   width: 100%;
   height: 100%;
   padding: 2%;
   text-align: left;
 }
-.wrapper .information ul {
+.footer .information ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
 @media ( max-width: 600px)  {
-  .wrapper .information ul {
-    width: 80%;
-    padding: 5%;
+  .footer .information ul {
+    width: 100%;
+    padding: 2%;
     margin: 2%;
-    margin-left: 7%;
-    padding-right: 5%;
+    margin-left: 5%;
+    padding-right: 8%;
     align-items: center;
     flex-wrap: wrap;
   }
 }
 @media (max-width: 403px) {
-  .wrapper .information ul {
+  .footer .information ul {
     width: 100%;
     padding: 5%;
     margin: 2%;
-    margin-left: 4%;
+    padding-right: 5%;
+    margin-left: 2%;
     align-items: center;
     flex-wrap: wrap;
   }
 }
 @media ( max-width: 780px) {
-  .wrapper .information ul li {
+  .footer .information ul li {
     padding: 2%;
   }
 }
 @media ( max-width: 600px)  {
-  .wrapper .information ul li {
-    padding: 2%;
+  .footer .information ul li {
+    padding: 5%;
   }
 }
 @media (max-width: 403px) {
-  .wrapper .information ul li {
+  .footer .information ul li {
     padding: 4%;
   }
 }
-.wrapper .information ul a {
+.footer .information ul a {
   text-decoration: none;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: oblique;
 }
-.wrapper .information ul #icon {
+.footer .information ul #icon {
   color: #318ce7;
   background-color: whitesmoke;
   font-size: 1.5rem;
   padding: 0%;
 }
-.wrapper .information ul #icon .svg-inline--fa {
+.footer .information ul #icon .svg-inline--fa {
   display: var(--fa-display, inline-block);
   height: 1.5em;
   overflow: hidden;
   padding: 0%;
   vertical-align: -0.4em;
 }
-.wrapper .information ul #icon-2 {
+.footer .information ul #icon-2 {
   background-color: whitesmoke;
   font-size: 1.5rem;
   padding: 0%;
 }
-.wrapper .information ul #icon-2 .svg-inline--fa {
+.footer .information ul #icon-2 .svg-inline--fa {
   display: var(--fa-display, inline-block);
   height: 1.5em;
   overflow: hidden;

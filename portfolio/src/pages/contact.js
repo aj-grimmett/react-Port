@@ -11,8 +11,11 @@ const Contact = () => {
 
   const submit = () => {
     if (
-      (name && tel && email && message) ||
-      (name && email && tel && company && message)
+      name &&
+      tel &&
+      email &&
+      message
+      // (name && email && tel && company && message)
     ) {
       const templateParams = {
         name,
@@ -45,8 +48,10 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container mt-5">
-        <h2 className="mt-5">Contact Form </h2>
-        <p style={{ fontSize: "1rem" }}>* means required to fill </p>
+        <h1 className="mt-5">Contact Form </h1>
+        <p style={{ fontSize: "1.25rem", fontWeight: "400" }}>
+          * means required to fill{" "}
+        </p>
         <form>
           <div className="mb-5">
             <label className="form-label" htmlFor="name">
@@ -63,7 +68,7 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label className="form-label" htmlFor="tel">
-              Phone Number
+              Phone Number*
             </label>
             <input
               className="form-control"
@@ -111,16 +116,24 @@ const Contact = () => {
               required
             />
           </div>
-          <button
-            onClick={submit}
-            style={{ textAlign: "center" }}
-            className="btn btn-md btn-danger mb-5"
-            type="submit"
+          <div>
+            <button
+              onClick={submit}
+              style={{ textAlign: "center" }}
+              className="btn btn-md btn-danger mb-5"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+
+          <span
+            style={{ fontWeight: "600", textAlign: "center" }}
+            className={emailSent ? "visible" : null}
           >
-            Submit
-          </button>
-          <span className={emailSent ? "visible" : null}>
-            Thank you for conntacing me. Will be in touch as soon as I can
+            <u>
+              Thank you for contacting me! I will be in touch as soon as I can.
+            </u>
           </span>
         </form>
       </div>

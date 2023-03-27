@@ -8,7 +8,7 @@ const download = <FontAwesomeIcon icon={faDownload} />;
 
 const About = () => {
   return (
-    <div className="contact">
+    <div className="about">
       <div className="header ">
         <div className="image">
           <img
@@ -43,13 +43,12 @@ const About = () => {
       <div className="ab-container">
         <div className="pro">
           <p>
-            I am mainly self-taught and been studying since 2019. Then in the
-            summer of 2020 I enrolled into an online coding bootcamp at Lambda
-            School which is now known as Bloom Insitute of Technology. I
-            leanered most of my skills doing classes on Udemy. Focusing on
-            certain coding langues and software programs to make me as well
-            balanced of a developer as I can be.
+            I learned most of my skills since Lambda doing classes mainly on
+            Udemy but also other online platforms including Youtube,
+            Freecodecamp.com and Odinproject.com. I focused on certain coding
+            languages to make me as well balanced of a developer as I can be.
           </p>
+
           <p>
             I am most comfortable doing frontend programming but open to backend
             and full-stack opportunities. I always enjoy challenging myslef and
@@ -57,7 +56,7 @@ const About = () => {
             most.
           </p>
         </div>
-        <div claassName="free">
+        <div className="free">
           <h2>Also...</h2>
           <p>
             For small businesses and individuals wanting a website I also offer
