@@ -6,10 +6,12 @@ import Home from "./pages/home";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import Footer from "./Footer/Footer";
+import MetaPixel from "./Utils/meta/MetaPixel";
 function App() {
   return (
     <Router>
       <div>
+        <MetaPixel />
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
