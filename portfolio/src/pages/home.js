@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import background from "../assets/images/desk-5.jpg";
 import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="home">

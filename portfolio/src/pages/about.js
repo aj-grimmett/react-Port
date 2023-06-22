@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../assets/pdf/Albert-Grimmett-Jr.pdf";
+import Resume from "../assets/pdf/Albert-Grimmett-Jr-8 (1).pdf";
 import SelfPort from "../assets/images/self.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
